@@ -11,17 +11,23 @@ namespace EmployeeWageComputation
             int empHrs = 0;
             int empRatePerHr = 20;
             //constants
-            int PRESENT = 1;
+            //int PRESENT = 1;
             int EMP_RATEPER_HR = 20;
+            int FULL_TIME = 1;
+            int PART_TIME = 2;
 
             //inbuilt class
             Random random = new Random();
-            int employeeCheck = random.Next(0, 2);
+            int employeeCheck = random.Next(0, 3);
 
             Console.WriteLine("Random value" + employeeCheck);
-            if (employeeCheck == PRESENT)
+            if (employeeCheck == FULL_TIME)
             {
                 empHrs = 8;
+            }
+            else if (employeeCheck == PART_TIME)
+            {
+                empHrs = 4;
             }
             else
             {
